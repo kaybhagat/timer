@@ -1,11 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CDECFF;
+}
+
 .App {
     text-align: center;
-    background-color: #ffffffd7;
-    width: 70vw;
-    padding: 5%;
+    background:  #333333;
+    width: 60vw;
+    height: 80vh;
+    max-height: fit-content;
     border-radius: 15px;
     box-shadow: #3e415380  1px 3px 20px;
+    font-family: 'Rajdhani', sans-serif;
 }
+@media only screen and (max-height: 500px),
+            screen and (max-width: 200px) {
+    .App {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      /* flex-direction: column; */
+      flex-wrap: wrap;
+    }
+
+    .button{
+      width: auto;
+    }
+  }
+
+
 
 .center{
     display: flex;
@@ -15,4 +47,30 @@
 .container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.timer{
+    font-size: 4em;
+    font-weight: 500;
+
+}
+
+.button{
+  font-size: large;
+}
+
+.desc{
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.blink_me{
+  animation: '';
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  
 }

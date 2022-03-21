@@ -1,9 +1,9 @@
 import React from "react";
 
-const Speed = ({rate, speed, changeSpeed}) => {
+const Speed = ({rate, changeSpeed}) => {
     return (
         <div>
-            <button className = 'gray br3 w-90 pa3 mr2 bg-transparent bw1 ba b--gray hover-bg-gray hover-white active'
+            <button className = 'lightest-blue br3 w-90 pa3 mr2 bg-transparent bw1 ba b--gray hover-bg-gray hover-white active button'
                     onClick={() => changeSpeed(rate)}>
                 {rate}X
             </button>
@@ -12,5 +12,3 @@ const Speed = ({rate, speed, changeSpeed}) => {
 }
 
 export default Speed;
-
-// mv1 mh0 pv2 ph3
