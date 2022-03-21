@@ -80,9 +80,11 @@ function App() {
 
   // START BUTTON
   const onButtonStart = () => {
+    if(min>0){
     setTimerOn(true);
     setTotalTime(min*60);
     setHalfway((min*60)/2);
+    }
   }
 
 
