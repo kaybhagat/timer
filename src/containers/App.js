@@ -54,16 +54,19 @@ function App() {
           setColor("#ff7e33");
         } 
         if (totalTime <11){
-          setBlink("blink 1s linear infinite");
+          setBlink("blink 0.5s linear infinite");
         }
       setTotalTime(totalTime => totalTime -1);
       setMin(setFormat(Math.floor(totalTime/60)));
       setSeconds(setFormat(totalTime%60))
-    } else {
-      onReset();
+    } else if (totalTime === 0){
+      setSeconds('00');
+      setBlink('');
       setDescription('Times up!');
       }
-    }  
+    } else {
+      clearInterval(interval);
+    } 
   }, speed)
     return () => clearInterval(interval)
   } ,[timerOn, totalTime, seconds, speed,min, description, halfway])
